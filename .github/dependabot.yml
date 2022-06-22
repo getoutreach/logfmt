@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    # Bootstrap managed dependencies
+    ignore:
+      - dependency-name: github.com/getoutreach/gobox
+      - dependency-name: github.com/urfave/cli/v2
+
+  # Ignore semantic-release, this code is only executed in CI.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: "*"
+
+  ###Block(dependabotPackageManagers)
+  ###EndBlock(dependabotPackageManagers)

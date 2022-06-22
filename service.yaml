@@ -1,0 +1,63 @@
+name: logfmt
+reportingTeam: fnd-dtss
+description: Development time log formatter. Helps format structured logs to a human readable format.
+oss: true
+slack: dev-tooling-notifications
+library: true
+commands:
+  - logfmt
+circleAPIKey: 2b5e5793e375e5a6ddf98251848372496e943192
+lintroller: platinum
+releaseType: semver
+releaseOptions:
+  allowPrereleases: true
+  allowMajorVersions: true
+deployTo:
+  environments: []
+arguments:
+  circleAPIKey: 2b5e5793e375e5a6ddf98251848372496e943192
+  commands:
+    - logfmt
+  commitGuard: false
+  dependencies:
+    optional: []
+    required: []
+  description: Development time log formatter. Helps format structured logs to a human readable format.
+  grpcClients: []
+  kubernetes:
+    groups: []
+  lintroller: platinum
+  opslevel:
+    confluenceSpaceKey: DTSS
+    datadogDashboards:
+      mainLink: ""
+    designDocumentLink: ""
+  oss: true
+  releaseOptions:
+    allowMajorVersions: true
+    enablePrereleases: true
+  reportingTeam: fnd-dtss
+  resources: {}
+  service: false
+  tutorial: false
+  vaultSecrets:
+    - deploy/honeycomb_new/%(environment)s/honeycomb
+    - deploy/launchdarkly/%(environment)s/launchdarkly
+    - deploy/mint/%(environment)s/validation/mint-validator-payload
+    - deploy/flagship-shared-secret/%(environment)s/authn-flagship-payload
+modules:
+  - name: github.com/getoutreach/stencil-base
+  - name: github.com/getoutreach/stencil-golang
+  - name: github.com/getoutreach/stencil-opslevel
+  - name: github.com/getoutreach/stencil-outreach
+  - name: github.com/getoutreach/stencil-circleci
+  - name: github.com/getoutreach/stencil-actions
+opsLevel:
+  serviceTier: 0
+  lifecycle: ""
+  confluenceSpaceKey: DTSS
+  pagerDutyLink: ""
+  datadogDashboards:
+    mainLink: ""
+    custom: []
+  designDocumentLink: ""
