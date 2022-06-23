@@ -40,11 +40,7 @@ arguments:
   resources: {}
   service: false
   tutorial: false
-  vaultSecrets:
-    - deploy/honeycomb_new/%(environment)s/honeycomb
-    - deploy/launchdarkly/%(environment)s/launchdarkly
-    - deploy/mint/%(environment)s/validation/mint-validator-payload
-    - deploy/flagship-shared-secret/%(environment)s/authn-flagship-payload
+  vaultSecrets: []
 modules:
   - name: github.com/getoutreach/stencil-base
   - name: github.com/getoutreach/stencil-golang
