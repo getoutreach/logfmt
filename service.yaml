@@ -8,6 +8,7 @@ commands:
   - logfmt
 circleAPIKey: 2b5e5793e375e5a6ddf98251848372496e943192
 lintroller: platinum
+tracing: honeycomb
 releaseType: semver
 releaseOptions:
   allowPrereleases: true
@@ -39,8 +40,13 @@ arguments:
   reportingTeam: fnd-dtss
   resources: {}
   service: false
+  tracing: honeycomb
   tutorial: false
-  vaultSecrets: []
+  vaultSecrets:
+    - deploy/honeycomb_new/%(environment)s/honeycomb
+    - deploy/launchdarkly/%(environment)s/launchdarkly
+    - deploy/mint/%(environment)s/validation/mint-validator-payload
+    - deploy/flagship-shared-secret/%(environment)s/authn-flagship-payload
 modules:
   - name: github.com/getoutreach/stencil-base
   - name: github.com/getoutreach/stencil-golang
