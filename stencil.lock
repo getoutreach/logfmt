@@ -1,5 +1,5 @@
 version: v1.19.3
-generated: 2022-06-24T19:20:30.321597Z
+generated: 2022-06-27T17:47:12.737904Z
 modules:
     - name: github.com/getoutreach/stencil-actions
       url: https://github.com/getoutreach/stencil-actions
@@ -15,7 +15,7 @@ modules:
       version: v1.0.0
     - name: github.com/getoutreach/stencil-golang
       url: https://github.com/getoutreach/stencil-golang
-      version: v1.1.0-rc.3
+      version: v1.2.0-rc.1
     - name: github.com/getoutreach/stencil-opslevel
       url: https://github.com/getoutreach/stencil-opslevel
       version: v0.1.0
@@ -100,9 +100,6 @@ files:
       module: github.com/getoutreach/stencil-base
     - name: _helpers
       template: _helpers.tpl
-      module: github.com/getoutreach/stencil-opslevel
-    - name: _helpers
-      template: _helpers.tpl
       module: github.com/getoutreach/stencil-circleci
     - name: _helpers
       template: _helpers.tpl
@@ -110,6 +107,9 @@ files:
     - name: _helpers
       template: _helpers.tpl
       module: github.com/getoutreach/stencil-golang
+    - name: _helpers
+      template: _helpers.tpl
+      module: github.com/getoutreach/stencil-opslevel
     - name: api/clients/node/.eslintrc.js
       template: api/clients/node/.eslintrc.js.tpl
       module: github.com/getoutreach/stencil-golang
