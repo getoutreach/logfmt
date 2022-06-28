@@ -13,8 +13,10 @@ import (
 	gcli "github.com/getoutreach/gobox/pkg/cli"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli/v2"
+
 	// Place any extra imports for your startup code here
 	///Block(imports)
+	"github.com/getoutreach/logfmt/internal/runner"
 	///EndBlock(imports)
 )
 
@@ -50,12 +52,24 @@ func main() {
 		Version: oapp.Version,
 		Name:    "logfmt",
 		///Block(app)
-
+		Usage: `make test | logfmt -filter <filter> -format <format>`,
+		Action: func(c *cli.Context) error {
+			r := runner.New(log, c.String("filter"), c.String("format"))
+			r.Run()
+			return nil
+		},
 		///EndBlock(app)
 	}
 	app.Flags = []cli.Flag{
 		///Block(flags)
-
+		&cli.StringFlag{
+			Name:  "filter",
+			Usage: "filter the log. Use jq syntax",
+		},
+		&cli.StringFlag{
+			Name:  "format",
+			Usage: "format the output.  Use golang templates syntax",
+		},
 		///EndBlock(flags)
 	}
 	app.Commands = []*cli.Command{
