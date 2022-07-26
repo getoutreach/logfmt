@@ -9,6 +9,7 @@ commands:
 circleAPIKey: 2b5e5793e375e5a6ddf98251848372496e943192
 lintroller: platinum
 tracing: honeycomb
+metrics: datadog
 releaseType: semver
 releaseOptions:
   allowPrereleases: true
@@ -28,6 +29,7 @@ arguments:
   kubernetes:
     groups: []
   lintroller: platinum
+  metrics: datadog
   opslevel:
     confluenceSpaceKey: DTSS
     datadogDashboards:
