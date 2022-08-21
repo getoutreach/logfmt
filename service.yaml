@@ -1,5 +1,5 @@
 name: logfmt
-reportingTeam: fnd-dtss
+reportingTeam: fnd-dt
 description: Development time log formatter. Helps format structured logs to a human readable format.
 oss: true
 slack: dev-tooling-notifications
@@ -9,6 +9,7 @@ commands:
 circleAPIKey: 2b5e5793e375e5a6ddf98251848372496e943192
 lintroller: platinum
 tracing: honeycomb
+metrics: datadog
 releaseType: semver
 releaseOptions:
   allowPrereleases: true
@@ -28,6 +29,7 @@ arguments:
   kubernetes:
     groups: []
   lintroller: platinum
+  metrics: datadog
   opslevel:
     confluenceSpaceKey: DTSS
     datadogDashboards:
@@ -37,7 +39,7 @@ arguments:
   releaseOptions:
     allowMajorVersions: true
     enablePrereleases: true
-  reportingTeam: fnd-dtss
+  reportingTeam: fnd-dt
   resources: {}
   service: false
   tracing: honeycomb
@@ -48,12 +50,12 @@ arguments:
     - deploy/mint/%(environment)s/validation/mint-validator-payload
     - deploy/flagship-shared-secret/%(environment)s/authn-flagship-payload
 modules:
-  - name: github.com/getoutreach/stencil-base
   - name: github.com/getoutreach/stencil-golang
   - name: github.com/getoutreach/stencil-opslevel
   - name: github.com/getoutreach/stencil-outreach
   - name: github.com/getoutreach/stencil-circleci
   - name: github.com/getoutreach/stencil-actions
+  - name: github.com/getoutreach/stencil-base
 opsLevel:
   serviceTier: 0
   lifecycle: ""
