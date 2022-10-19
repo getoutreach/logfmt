@@ -15,9 +15,9 @@ import (
 	"github.com/urfave/cli/v2"
 
 	// Place any extra imports for your startup code here
-	///Block(imports)
+	// <<Stencil::Block(imports)>>
 	"github.com/getoutreach/logfmt/internal/runner"
-	///EndBlock(imports)
+	// <</Stencil::Block>>
 )
 
 // HoneycombTracingKey gets set by the Makefile at compile-time which is pulled
@@ -28,40 +28,40 @@ var HoneycombTracingKey = "NOTSET" //nolint:gochecknoglobals // Why: We can't co
 // down by devconfig.sh.
 var TeleforkAPIKey = "NOTSET" //nolint:gochecknoglobals // Why: We can't compile in things as a const.
 
-///Block(honeycombDataset)
+// <<Stencil::Block(honeycombDataset)>>
 
 // HoneycombDataset is a constant denoting the dataset that traces should be stored
 // in in honeycomb.
 const HoneycombDataset = ""
 
-///EndBlock(honeycombDataset)
+// <</Stencil::Block>>
 
-///Block(global)
+// <<Stencil::Block(global)>>
 
-///EndBlock(global)
+// <</Stencil::Block>>
 
 func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	log := logrus.New()
 
-	///Block(init)
+	// <<Stencil::Block(init)>>
 
-	///EndBlock(init)
+	// <</Stencil::Block>>
 
 	app := cli.App{
 		Version: oapp.Version,
 		Name:    "logfmt",
-		///Block(app)
+		// <<Stencil::Block(app)>>
 		Usage: `make test | logfmt -filter <filter> -format <format>`,
 		Action: func(c *cli.Context) error {
 			r := runner.New(log, c.String("filter"), c.String("format"))
 			r.Run()
 			return nil
 		},
-		///EndBlock(app)
+		// <</Stencil::Block>>
 	}
 	app.Flags = []cli.Flag{
-		///Block(flags)
+		// <<Stencil::Block(flags)>>
 		&cli.StringFlag{
 			Name:  "filter",
 			Usage: "filter the log. Use jq syntax",
@@ -70,17 +70,17 @@ func main() {
 			Name:  "format",
 			Usage: "format the output.  Use golang templates syntax",
 		},
-		///EndBlock(flags)
+		// <</Stencil::Block>>
 	}
 	app.Commands = []*cli.Command{
-		///Block(commands)
+		// <<Stencil::Block(commands)>>
 
-		///EndBlock(commands)
+		// <</Stencil::Block>>
 	}
 
-	///Block(postApp)
+	// <<Stencil::Block(postApp)>>
 
-	///EndBlock(postApp)
+	// <</Stencil::Block>>
 
 	// Insert global flags, tracing, updating and start the application.
 	gcli.HookInUrfaveCLI(ctx, cancel, &app, log, HoneycombTracingKey, HoneycombDataset, TeleforkAPIKey)
