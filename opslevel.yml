@@ -9,22 +9,22 @@ version: 1
 service:
   name: logfmt
   product: Outreach
-  owner: fnd_dt
+  owner: fnd-dt
   language: Golang
   framework: stencil
   description: >
     Development time log formatter. Helps format structured logs to a human readable format.
-  ###Block(extraServiceMetadata)
-  ###EndBlock(extraServiceMetadata)
+  ## <<Stencil::Block(extraServiceMetadata)>>
+  ## <</Stencil::Block>>
   aliases:
-    ###Block(extraAliases)
+    ## <<Stencil::Block(extraAliases)>>
 
-    ###EndBlock(extraAliases)
+    ## <</Stencil::Block>>
     - logfmt
   tags:
-    ###Block(extraTags)
+    ## <<Stencil::Block(extraTags)>>
 
-    ###EndBlock(extraTags)
+    ## <</Stencil::Block>>
     - key: repo
       value: "https://github.com/getoutreach/logfmt"
     - key: reporting_team
@@ -34,7 +34,7 @@ service:
     - key: name
       value: "logfmt"
     - key: stencil_version
-      value: "v1.21.1"
+      value: "v1.28.1"
     - key: golang_version
       value: "1.17.9"
     - key: tutorial
