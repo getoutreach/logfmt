@@ -6,7 +6,7 @@ require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/getoutreach/gobox v1.71.0
 	github.com/itchyny/gojq v0.12.8
-	github.com/sirupsen/logrus v1.9.0
+	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli/v2 v2.16.3
 	gotest.tools/v3 v3.5.0
 )
