@@ -8,7 +8,7 @@ require (
 	github.com/itchyny/gojq v0.12.13
 	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli/v2 v2.25.7
-	gotest.tools/v3 v3.5.0
+	gotest.tools/v3 v3.5.1
 )
 
 require (
