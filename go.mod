@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/getoutreach/gobox v1.77.0
-	github.com/itchyny/gojq v0.12.14
+	github.com/itchyny/gojq v0.12.15
 	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli/v2 v2.25.7
 	gotest.tools/v3 v3.5.1
@@ -77,7 +77,7 @@ require (
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.42.0 // indirect
 	github.com/prometheus/procfs v0.10.1 // indirect
-	github.com/rivo/uniseg v0.4.4 // indirect
+	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/schollz/progressbar/v3 v3.13.1 // indirect
 	github.com/sergi/go-diff v1.2.0 // indirect
@@ -102,7 +102,7 @@ require (
 	golang.org/x/mod v0.12.0 // indirect
 	golang.org/x/net v0.14.0 // indirect
 	golang.org/x/oauth2 v0.11.0 // indirect
-	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/sys v0.18.0 // indirect
 	golang.org/x/term v0.11.0 // indirect
 	golang.org/x/text v0.12.0 // indirect
 	golang.org/x/tools v0.12.0 // indirect
