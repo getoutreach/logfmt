@@ -1,9 +1,9 @@
 name: logfmt
 arguments:
-  circleAPIKey: 2b5e5793e375e5a6ddf98251848372496e943192
   ciOptions:
-    skipE2e: true
     skipDocker: true
+    skipE2e: true
+  circleAPIKey: 2b5e5793e375e5a6ddf98251848372496e943192
   commands:
     - logfmt
   description: Development time log formatter. Helps format structured logs to a human readable format.
@@ -16,8 +16,18 @@ arguments:
   service: false
 modules:
   - name: github.com/getoutreach/stencil-base
+    channel: rc
   - name: github.com/getoutreach/stencil-golang
+    channel: rc
   - name: github.com/getoutreach/stencil-outreach
+    channel: rc
   - name: github.com/getoutreach/stencil-circleci
+    channel: rc
   - name: github.com/getoutreach/stencil-actions
+    channel: rc
   - name: github.com/getoutreach/stencil-discovery
+    channel: rc
+  - name: github.com/getoutreach/devbase
+    channel: rc
+  - name: github.com/getoutreach/stencil-pipeline
+    channel: rc
