@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/getoutreach/gobox v1.90.2
-	github.com/itchyny/gojq v0.12.15
+	github.com/itchyny/gojq v0.12.16
 	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli/v2 v2.27.2
 	gotest.tools/v3 v3.5.1
@@ -56,7 +56,7 @@ require (
 	github.com/honeycombio/beeline-go v1.16.0 // indirect
 	github.com/huandu/xstrings v1.3.3 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
-	github.com/itchyny/timefmt-go v0.1.5 // indirect
+	github.com/itchyny/timefmt-go v0.1.6 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kevinburke/ssh_config v1.2.0 // indirect
