@@ -10,7 +10,7 @@ require (
 	github.com/itchyny/gojq v0.12.16
 	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli/v2 v2.27.4
-	gotest.tools/v3 v3.5.1
+	gotest.tools/v3 v3.5.2
 )
 
 require (
