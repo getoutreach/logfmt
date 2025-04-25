@@ -7,7 +7,7 @@ toolchain go1.23.4
 require (
 	github.com/Masterminds/sprig/v3 v3.3.0
 	github.com/getoutreach/gobox v1.104.0
-	github.com/itchyny/gojq v0.12.16
+	github.com/itchyny/gojq v0.12.17
 	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli/v2 v2.27.4
 	gotest.tools/v3 v3.5.2
