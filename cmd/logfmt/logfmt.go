@@ -55,7 +55,10 @@ func main() {
 		Name:                  "logfmt",
 		EnableShellCompletion: true,
 		// <<Stencil::Block(app)>>
-		Usage: `make test | logfmt -filter <filter> -format <format>`,
+		Usage: "Formats structured logs to a human readable format.",
+		Description: `Example:
+
+    make test | logfmt --filter <filter> --format <format>`,
 		Action: func(ctx context.Context, c *cli.Command) error {
 			r := runner.New(log, c.String("filter"), c.String("format"))
 			r.Run()
