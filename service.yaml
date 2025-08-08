@@ -14,6 +14,8 @@ arguments:
     enablePrereleases: true
   reportingTeam: fnd-dt
   service: false
+  versions:
+    urfave-cli: v3
 modules:
   - name: github.com/getoutreach/stencil-base
     channel: rc
