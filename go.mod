@@ -9,7 +9,7 @@ require (
 	github.com/getoutreach/gobox v1.107.1
 	github.com/itchyny/gojq v0.12.17
 	github.com/sirupsen/logrus v1.9.3
-	github.com/urfave/cli/v2 v2.27.6
+	github.com/urfave/cli/v3 v3.3.3
 	gotest.tools/v3 v3.5.2
 )
 
@@ -26,7 +26,7 @@ require (
 	github.com/cyphar/filepath-securejoin v0.4.1 // indirect
 	github.com/google/go-github/v71 v71.0.0 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
-	github.com/urfave/cli/v3 v3.3.3 // indirect
+	github.com/urfave/cli/v2 v2.27.6 // indirect
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
 )

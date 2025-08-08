@@ -13,7 +13,7 @@ import (
 	"github.com/getoutreach/gobox/pkg/cfg"
 	gcli "github.com/getoutreach/gobox/pkg/cli"
 	"github.com/sirupsen/logrus"
-	"github.com/urfave/cli/v2"
+	"github.com/urfave/cli/v3"
 
 	// Place any extra imports for your startup code here
 	// <<Stencil::Block(imports)>>
@@ -50,12 +50,13 @@ func main() {
 
 	// <</Stencil::Block>>
 
-	app := cli.App{
-		Version: oapp.Version,
-		Name:    "logfmt",
+	app := cli.Command{
+		Version:               oapp.Version,
+		Name:                  "logfmt",
+		EnableShellCompletion: true,
 		// <<Stencil::Block(app)>>
 		Usage: `make test | logfmt -filter <filter> -format <format>`,
-		Action: func(c *cli.Context) error {
+		Action: func(ctx context.Context, c *cli.Command) error {
 			r := runner.New(log, c.String("filter"), c.String("format"))
 			r.Run()
 			return nil
@@ -85,7 +86,7 @@ func main() {
 	// <</Stencil::Block>>
 
 	// Insert global flags, tracing, updating and start the application.
-	gcli.Run(ctx, cancel, &app, &gcli.Config{
+	gcli.RunV3(ctx, cancel, &app, &gcli.Config{
 		Logger: log,
 		Telemetry: gcli.TelemetryConfig{
 			Otel: gcli.TelemetryOtelConfig{
