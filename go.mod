@@ -7,7 +7,7 @@ toolchain go1.25.5
 require (
 	github.com/Masterminds/sprig/v3 v3.3.0
 	github.com/getoutreach/gobox v1.110.5
-	github.com/itchyny/gojq v0.12.18
+	github.com/itchyny/gojq v0.12.19
 	github.com/sirupsen/logrus v1.9.4
 	github.com/urfave/cli/v3 v3.4.1
 	gotest.tools/v3 v3.5.2
@@ -69,7 +69,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.27.2 // indirect
 	github.com/honeycombio/beeline-go v1.19.0 // indirect
 	github.com/huandu/xstrings v1.5.0 // indirect
-	github.com/itchyny/timefmt-go v0.1.7 // indirect
+	github.com/itchyny/timefmt-go v0.1.8 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kevinburke/ssh_config v1.2.0 // indirect
